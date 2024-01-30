@@ -1,9 +1,15 @@
 from os import system
-from .data import camper
+from .data import camper, generos
 from module.validate import menuNoValid
-def save (nombre):
-    camper.append(nombre)
-    return f"Sucessfully Camper{nombre}"
+def save ():
+    info = {
+        "Nombre": input("Ingrese el nombre del camper\n"),
+        "Apellido": input("Ingrese apellido del camper\n"),
+        "Edad": input("Ingrese la edad del camper\n"),
+        "Genero": input("Elija su genero:\n\t".join([f"{generos.index(i)+1}. {i}\n" for i in sorted(generos)]))
+    }
+    camper.append(info)
+    return "Sucessfully Camper"
 
 def edit():
     return "Edit to camper"
