@@ -1,4 +1,5 @@
 #from module.camper import *
+import json
 from os import system
 import module.camper as camper #importa el modulo (import nombreDeCarpeta.nombreArchivo)
 import module.trainer as trainer
@@ -20,8 +21,11 @@ while(bandera):
     opc = int(input())
     match(opc):
         case 1:
-            system("clear")
-            camper.menu()
+             with open("module/storage/camper.json", "r") as f:
+                camper.camper = json.loads(f.read())
+                f.close()
+                system("clear")
+                camper.menu()
         case 2:
             system("clear")
             trainer.menu()
