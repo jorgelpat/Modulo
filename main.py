@@ -5,6 +5,7 @@ import module.camper as camper #importa el modulo (import nombreDeCarpeta.nombre
 import module.trainer as trainer
 import module.validate as validate
 from module.validate import menuNoValid
+#from module.data import camper as dataCamper
 #from module.camper import * #Con (*) importan todos,
 #from module.camper import save, delete  
 #from module.trainer import save, delete
