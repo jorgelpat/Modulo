@@ -17,6 +17,23 @@ def save ():
     return "Sucessfully Camper"
 
 def edit():
+    system("clear")
+    print("""
+    ***************************
+    * Acualizacion del camper *
+    ***************************
+    """)
+    codigo = int(input("Ingrese el codigo del camper que deseas actualizar"))
+    print(f"""
+________________________
+Codigo: {codigo}
+Nombre: {camper[codigo].get('Nombre')}
+Apellido: {camper[codigo].get('Apellido')}
+Edad: {camper[codigo].get('Edad')}
+Genero: {camper[codigo].get('Genero')}
+________________________
+    """)
+    print("¿Este es el camper que deseas actualizar?")
     return "Edit to camper"
 
 def search():
