@@ -21,7 +21,7 @@ while(bandera):
     opc = int(input())
     match(opc):
         case 1:
-             with open("module/storage/camper.json", "r") as f:
+            with open("module/storage/camper.json", "r") as f:
                 camper.camper = json.loads(f.read())
                 f.close()
                 system("clear")
