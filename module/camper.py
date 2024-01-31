@@ -27,9 +27,16 @@ def search():
     ********************
     """)
     for i,val in enumerate (camper):
-        print("_____________")
-        print(f"Codigo: {i}\nNombre: {val.get('Nombre')}\nApellido: {val.get('Apellido')}\nEdad: {val.get('Edad')}\nGenero: {val.get('Genero')}")
-        print("_____________")
+        for i,val in enumerate(camper):
+            print(f"""
+________________________
+Codigo: {i}
+Nombre: {val.get('Nombre')}
+Apellido: {val.get('Apellido')}
+Edad: {val.get('Edad')}
+Genero: {val.get('Genero')}
+________________________
+            """)
     return "The camper is available"
 
 def delete():
