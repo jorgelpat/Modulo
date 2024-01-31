@@ -7,7 +7,7 @@ def save ():
         "Nombre": input("Ingrese el nombre del camper\n"),
         "Apellido": input("Ingrese apellido del camper\n"),
         "Edad": input("Ingrese la edad del camper\n"),
-        "Genero": input("Elija su genero:\n\t".join([f"{generos.index(i)+1}. {i}\n" for i in sorted(generos)]))
+        "Genero": input("Elija su genero:\n\t"+"\t".join([f"{generos.index(i)+1}. {i}\n" for i in sorted(generos)]))
     }
     camper.append(info)
     with open("module/storage/camper.json", "w") as f:
@@ -34,6 +34,24 @@ Genero: {camper[codigo].get('Genero')}
 ________________________
     """)
     print("¿Este es el camper que deseas actualizar?")
+    bandera=True
+    while (bandera):
+        print("1. Si")
+        print("2. No")
+        opc = int(input())
+        if(opc == 1):
+            info = {
+                "Nombre": input("Ingrese el nombre del camper\n"),
+                "Apellido": input("Ingrese el apellido del camper\n"),
+                "Edad": int(input("Ingrese la edad del camper\n")),
+                "Genero": input("Elija su genero:\n\t"+"\t".join([f"{generos.index(i)+1}. {i}\n" for i in sorted(generos)]))
+            }
+            camper[codigo] = info
+            with open("module/storage/camper.json", "w") as f:
+                data = json.dumps(camper, indent=4)
+                f.write(data)
+                f.close()
+                
     return "Edit to camper"
 
 def search():
