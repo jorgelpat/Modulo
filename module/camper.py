@@ -20,9 +20,9 @@ def edit():
     return "Edit to camper"
 
 def search():
-    for i in camper:
+    for i,val in enumerate (camper):
         print("_____________")
-        print(f"Nombre: {i.get('Nombre')}\nApellido: {i.get('Apellido')}\nEdad: {i.get('Edad')}\nGenero: {i.get('Genero')}")
+        print(f"Codigo: {i}\nNombre: {val.get('Nombre')}\nApellido: {val.get('Apellido')}\nEdad: {val.get('Edad')}\nGenero: {val.get('Genero')}")
         print("_____________")
     return "The camper is available"
 
