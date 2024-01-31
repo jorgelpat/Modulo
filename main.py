@@ -17,14 +17,17 @@ while (bandera):
     opc = int(input())
     match(opc):
         case 1:
-            
             with open("module/storage/camper.json", "r") as f:
                 camper.camper = json.loads(f.read())
                 f.close()
                 system("clear")
                 camper.menu()
         case 2:
-            print("")
+            with open("module/storage/trainer.json", "r") as f:
+                trainer.trainer = json.loads(f.read())
+                f.close()
+                system("clear")
+                trainer.menu()
         case 0:
             system("clear")
             bandera = False

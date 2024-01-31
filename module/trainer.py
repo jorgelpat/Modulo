@@ -3,6 +3,7 @@ from module.validate import menuNoValid
 
 
 def save ():
+    
     return "Sucessfully Trainer"
 
 def edit():
