@@ -14,7 +14,7 @@ def save ():
         "Nombre": input("Ingrese el nombre del trainer\n"),
         "Apellido": input("ingrese el apellido del trainer\n"),
         "Edad": int(input("ingrese la edad del trainer\n")),
-        "Género": input("Elija su género\n\t"+"\t".join([f"{generos.index(i)+1}.{i}\n" for i in sorted(generos)]))
+        "Genero": input("Elija su genero\n\t"+"\t".join([f"{generos.index(i)+1}.{i}\n" for i in sorted(generos)]))
     }
     trainer.append(info)
     with open("module/storage/trainer.json", "w") as f:
