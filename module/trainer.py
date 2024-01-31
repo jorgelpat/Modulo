@@ -19,6 +19,42 @@ def save ():
     return "Sucessfully Trainer"
 
 def edit():
+    bandera = True
+    while(bandera):
+        system("clear")
+        print("""
+        ****************************
+        * Acualizacion del trainer *
+        ****************************
+        """)
+        codigo = int(input("Ingrese el código del trainer que desee actualizar"))
+        print(f"""
+              
+Codigo: {codigo}
+Nombre: {trainer[codigo].get('Nombre')}
+Apellido: {trainer[codigo].get('Apellido')}
+Edad: {trainer[codigo].get('Edad')}
+Genero: {trainer[codigo].get('Genero')}
+
+        """)
+        print("¿Este es el trianer que desea actualizar?")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir")
+        opc = int(input())
+        if (opc == 1):
+            info = {
+                "Nombre": input("Ingrese el nombre del trainer\n"),
+                "Apellido": input("Ingrese el aprellido del trainer\n"),
+                "Edad": int(input("Ingrese la edad del trainer\n")),
+                "Genero": input("Elija su genero:\n\t"+"\t".join([f"{generos.index(i)+1}. {i}\n" for i in sorted(generos)]))
+            }
+            trainer[codigo] = info
+            with open("module/storage/trainer.json", "w") as f:
+                data = json.dumps(trainer, indent=4)
+                f.write(data)
+                f.close()
+            bandera = False
     return "Edit to trainer"
 
 def search():
