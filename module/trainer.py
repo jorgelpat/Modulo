@@ -67,9 +67,9 @@ __________________________________
 def search():
     system("clear")
     print("""
-    *********************
-    * Lista de trainers *
-    *********************
+    ***********************
+    *  Lista de trainers  *
+    ***********************
     """)
     for i,val in enumerate(trainer):
         print(f"""
@@ -84,6 +84,38 @@ _________________________________
     return "The trainer is available"
 
 def delete():
+    bandera = True
+    while(bandera):
+        system("clear")
+        print("""
+        *****************************
+        *  Eliminacion del trainer  *
+        *****************************
+        """)
+        codigo = int(input("Ingrese el codigo del camper que deseas eliminar: "))
+        print(f"""
+______________________________________
+Codigo: {codigo}
+Nombre: {trainer[codigo].get('Nombre')}
+Apellido: {trainer[codigo].get('Apellido')}
+Edad: {trainer[codigo].get('Edad')}
+Genero: {trainer[codigo].get('Genero')}
+______________________________________
+        """)
+        print("¿Este es el camper que deseas eliminar?")
+        print("1. Si")
+        print("2. No")
+        print("3. Salir")
+        opc = int(input())
+        if(opc == 1):
+            trainer.pop(codigo)
+            with open("module/storage/trainer.json", "w") as f:
+                data = json.dumps(trainer, indent=4)
+                f.write(data)
+                f.close()
+            bandera = False
+        elif(opc == 3):
+            bandera = False
     return "Trainer delete"
 
 def menu():
