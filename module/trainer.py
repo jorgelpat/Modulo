@@ -3,8 +3,13 @@ import json
 from module.validate import menuNoValid
 from .data import trainer, generos
 
-
 def save ():
+    system("clear")
+    print("""
+    ****************************
+    *  Formulario del trainer  *
+    ****************************
+    """)
     info = {
         "Nombre": input("Ingrese el nombre del trainer\n"),
         "Apellido": input("ingrese el apellido del trainer\n"),
@@ -29,13 +34,13 @@ def edit():
         """)
         codigo = int(input("Ingrese el código del trainer que desee actualizar"))
         print(f"""
-              
+__________________________________
 Codigo: {codigo}
 Nombre: {trainer[codigo].get('Nombre')}
 Apellido: {trainer[codigo].get('Apellido')}
 Edad: {trainer[codigo].get('Edad')}
 Genero: {trainer[codigo].get('Genero')}
-
+__________________________________
         """)
         print("¿Este es el trianer que desea actualizar?")
         print("1. Si")
@@ -55,9 +60,27 @@ Genero: {trainer[codigo].get('Genero')}
                 f.write(data)
                 f.close()
             bandera = False
+        elif(opc == 3):
+            bandera = False
     return "Edit to trainer"
 
 def search():
+    system("clear")
+    print("""
+    *********************
+    * Lista de trainers *
+    *********************
+    """)
+    for i,val in enumerate(trainer):
+        print(f"""
+_________________________________  
+Codigo: {i}
+Nombre: {val.get('Nombre')}
+Apellido: {val.get('Apellido')}
+Edad: {val.get('Edad')}
+Genero: {val.get('Genero')}
+_________________________________
+        """)
     return "The trainer is available"
 
 def delete():
