@@ -20,6 +20,12 @@ def edit():
     return "Edit to camper"
 
 def search():
+    system("clear")
+    print(f"""
+    ********************
+    * Lista de Campers *
+    ********************
+    """)
     for i,val in enumerate (camper):
         print("_____________")
         print(f"Codigo: {i}\nNombre: {val.get('Nombre')}\nApellido: {val.get('Apellido')}\nEdad: {val.get('Edad')}\nGenero: {val.get('Genero')}")

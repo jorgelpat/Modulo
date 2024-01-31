@@ -27,9 +27,9 @@ while(bandera):
                 system("clear")
                 camper.menu()
         case 2:
-            system("clear")
-            trainer.menu()
+            print("")
         case 0:
-            break
+            system("clear")
+            bandera = False
         case _:
             menuNoValid(opc)

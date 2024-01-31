@@ -4,5 +4,11 @@
         "Apellido": "Castro Escamilla",
         "Edad": 23,
         "Genero": "1"
+    },
+    {
+        "Nombre": "Maria",
+        "Apellido": "Del barrio",
+        "Edad": 15,
+        "Genero": "9"
     }
 ]
