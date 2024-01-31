@@ -6,9 +6,15 @@
         "Genero": "1"
     },
     {
-        "Nombre": "Maria",
-        "Apellido": "Del barrio",
-        "Edad": 15,
-        "Genero": "9"
+        "Nombre": "MARIA",
+        "Apellido": "DEL BARRIO",
+        "Edad": 16,
+        "Genero": "6"
+    },
+    {
+        "Nombre": "LUIS",
+        "Apellido": "ALEJANDRO",
+        "Edad": 20,
+        "Genero": "4"
     }
 ]

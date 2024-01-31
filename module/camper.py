@@ -18,7 +18,6 @@ def save():
     return "Sucessfully Camper"
 
 def edit():
-    
     bandera=True
     while (bandera):
         system("clear")
@@ -54,7 +53,7 @@ ________________________
                 data = json.dumps(camper, indent=4)
                 f.write(data)
                 f.close()
-                bandera == False
+            bandera == False
         elif(opc == 3):
             bandera == False
     return "Edit to camper"
