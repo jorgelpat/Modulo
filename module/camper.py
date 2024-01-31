@@ -4,6 +4,12 @@ from .validate import menuNoValid
 from .data import camper, generos
 
 def save():
+    system("clear")
+    print("""
+    ***************************
+    *  Formulario del camper  *
+    ***************************      
+    """)
     info = {
         "Nombre": input("Ingrese el nombre del camper\n"),
         "Apellido": input("Ingrese el apellido del camper\n"),
