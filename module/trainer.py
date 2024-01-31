@@ -125,20 +125,15 @@ def menu():
         print("\t1. Guardar trainer")
         print("\t2. Buscar trainer")
         print("\t3. Actualizar trainer")
-        print("\t4. Delete trainer")
+        print("\t4. Eliminar trainer")
         print("\t0. Atrás")
         opc = int(input())
         match(opc):
-            case 1:
-                save()
-            case 2:
-                search()
-            case 3:
-                edit()
-            case 4:
-                delete()
+            case 1: save()
+            case 2: search()
+            case 3: edit()
+            case 4: delete()
             case 0:
                 system("clear")
                 break
-            case _:
-                menuNoValid(opc)
+            case _: menuNoValid(opc)
