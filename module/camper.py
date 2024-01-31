@@ -20,6 +20,10 @@ def edit():
     return "Edit to camper"
 
 def search():
+    for i in camper:
+        print("_____________")
+        print(f"Nombre: {i.get('Nombre')}\nApellido: {i.get('Apellido')}\nEdad: {i.get('Edad')}\nGenero: {i.get('Genero')}")
+        print("_____________")
     return "The camper is available"
 
 def delete():
