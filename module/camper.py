@@ -96,7 +96,7 @@ Edad: {camper[codigo].get('Edad')}
 Genero: {camper[codigo].get('Genero')}
 ________________________
         """)
-        print("¿Este es el camper que deseas actualizar?")
+        print("¿Este es el camper que deseas eliminar?")
         print("1. Si")
         print("2. No")
         print("3. Salir")
