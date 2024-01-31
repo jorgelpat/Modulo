@@ -1,9 +1,21 @@
 from os import system
+import json
 from module.validate import menuNoValid
+from .data import trainer, generos
 
 
 def save ():
-    
+    info = {
+        "Nombre": input("Ingrese el nombre del trainer\n"),
+        "Apellido": input("ingrese el apellido del trainer\n"),
+        "Edad": int(input("ingrese la edad del trainer\n")),
+        "Género": input("Elija su género\n\t"+"\t".join([f"{generos.index(i)+1}.{i}\n" for i in sorted(generos)]))
+    }
+    trainer.append(info)
+    with open("module/storage/trainer.json", "w") as f:
+        data = json.dumps(trainer, indent=4)
+        f.write(data)
+        f.close()
     return "Sucessfully Trainer"
 
 def edit():
