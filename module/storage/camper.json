@@ -16,5 +16,11 @@
         "Apellido": "ALEJANDRO",
         "Edad": 20,
         "Genero": "4"
+    },
+    {
+        "Nombre": "Jorge",
+        "Apellido": "Pati\u00f1o",
+        "Edad": 29,
+        "Genero": "1"
     }
 ]
