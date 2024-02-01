@@ -59,9 +59,10 @@ ________________________
                 data = json.dumps(camper, indent=4)
                 f.write(data)
                 f.close()
-            bandera == False
+            bandera = False
         elif(opc == 3):
-            bandera == False
+            bandera = False
+            system("clear")
     return "Edit to camper"
 
 def search():
